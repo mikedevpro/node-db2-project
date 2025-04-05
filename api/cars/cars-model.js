@@ -1,12 +1,4 @@
-const knex = require('knex')
-
-const db = knex({
-  client: 'sqlite3',
-  connection: {
-    filename: './data/dealer.db3',
-  },
-  useNullAsDefault: true,
-});
+const db = require('../../data/dbConfig');
 
 const getAll = () => {
   return db('cars');
